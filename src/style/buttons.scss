@@ -1,0 +1,48 @@
+.cardButton {
+  margin: 16px 8px 16px 8px !important;
+  color: #fafafa !important;
+  font-family: Nunito Sans, sans-serif !important;
+
+  &:hover {
+    background-color: #2e7d32 !important;
+    /* green[800] */
+    border-radius: 0px;
+  }
+}
+
+.formButton {
+  margin: 16px 8px 16px 8px !important;
+  color: #fafafa !important;
+  font-family: Nunito Sans, sans-serif !important;
+
+  &:hover {
+    background-color: #2e7d32 !important;
+    /* green[800] */
+    border-radius: 0px;
+  }
+}
+
+.previousButton {
+  margin: 16px 8px 16px 8px !important;
+  color: #fdd835 !important;
+  font-family: Nunito Sans, sans-serif !important;
+
+
+  &:hover {
+    background-color: #2e7d32 !important;
+    /* green[800] */
+    border-radius: 0px;
+  }
+}
+
+.deleteButton {
+  margin: 16px 8px 16px 8px !important;
+  color: #fdd835 !important;
+  font-family: Nunito Sans, sans-serif !important;
+
+  &:hover {
+    background-color: #2e7d32 !important;
+    /* green[800] */
+    border-radius: 0px;
+  }
+}

@@ -1,0 +1,31 @@
+.modals {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  max-height: 80vh;
+  overflow-y: auto;
+  background-color: #fff;
+  box-shadow: 0 0 24px rgba(0, 0, 0, 0.16);
+  padding: 16px;
+  font-family: Nunito Sans, sans-serif !important;
+
+  &::-webkit-scrollbar {
+    width: 24px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #4CAF50;
+    /* green[600] */
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+    /* grey[50] */
+  }
+
+  .comments>div {
+    border-radius: 0px;
+  }
+}
