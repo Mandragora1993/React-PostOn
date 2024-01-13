@@ -19,7 +19,7 @@ import AlbumsList from "./routes/AlbumsList";
 export const App = () => {
   return (
       <Base>
-        <BrowserRouter basename="/PostOn">
+        <BrowserRouter basename="/React-PostOn">
           <div className="App">
             <Header />
             <Container>
