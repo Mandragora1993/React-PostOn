@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/PostOn/static/css/main.2ef46e8f.css",
+    "main.js": "/PostOn/static/js/main.82815940.js",
+    "index.html": "/PostOn/index.html",
+    "main.2ef46e8f.css.map": "/PostOn/static/css/main.2ef46e8f.css.map",
+    "main.82815940.js.map": "/PostOn/static/js/main.82815940.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2ef46e8f.css",
+    "static/js/main.82815940.js"
+  ]
+}
