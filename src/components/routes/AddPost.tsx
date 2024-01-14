@@ -1,7 +1,6 @@
 import { Button, Card, CardHeader, CssBaseline, TextField, ThemeProvider } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import { cardTheme, cardStyles } from "../../style/cardTheme";
 import './../../style/buttons.scss';
 import './../../style/form.scss';
 import ReplyIcon from '@mui/icons-material/Reply';
@@ -12,9 +11,7 @@ export default function AddPost() {
   const navigate = useNavigate();
 
   return (
-    <ThemeProvider theme={cardTheme}>
-      <CssBaseline />
-      <Card sx={{ ...cardStyles }}>
+      <Card sx={{  }}>
         <CardHeader className='formHeader'
           title="Dodanie posta"
         />
@@ -83,6 +80,5 @@ export default function AddPost() {
           </div>
         </form>
       </Card>
-    </ThemeProvider>
   );
 }

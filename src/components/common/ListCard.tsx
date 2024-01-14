@@ -3,10 +3,9 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
-import { ThemeProvider } from '@mui/material/styles';
+import { yellow } from '@mui/material/colors';
 import CardHeader from "@mui/material/CardHeader";
 import Avatar from "@mui/material/Avatar";
-import { CssBaseline } from "@mui/material";
 import { baseTheme } from "../../style/baseTheme";
 
 
@@ -24,7 +23,7 @@ export function Card({ name, title, image, description, children }: CardProps) {
       <MCard sx={{ marginBottom: 8 }}>
         <CardHeader
           avatar={
-            <Avatar sx={{ bgcolor: baseTheme.palette.secondary.main }} >
+            <Avatar sx={{ bgcolor: yellow[600] }} aria-label="recipe">
               {name}
             </Avatar>
           }
@@ -40,12 +39,12 @@ export function Card({ name, title, image, description, children }: CardProps) {
         <CardContent color="primary">
           <Typography>{description}</Typography>
           <Typography
-            variant="body2"
+            variant="body1"
             color={baseTheme.palette.primary.contrastText}
           ></Typography>
         </CardContent>
         <CardActions>
-          {children}
+          {/* {children} */}
         </CardActions>
       </MCard>
   );

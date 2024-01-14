@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import List from "../common/ListAlbums";
 import { useGetAlbumsByUserId } from "../../api/album/useGetAlbumsByUser";
 import './../../style/circular.scss';
+import { Card } from "../common/ListCard";
 
 
 export default function AlbumsList() {
@@ -14,8 +15,8 @@ export default function AlbumsList() {
   }
 
   return (
-    <div>
+    <Card name={""} title={""} description={""}>
       <List data={albums} />
-    </div>
+    </Card>
   );
 };

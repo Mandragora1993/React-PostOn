@@ -3,7 +3,7 @@ import { green, grey, yellow } from '@mui/material/colors';
 import { SxProps } from '@mui/system';
 import { Theme } from '@mui/material/styles';
 
-interface CardTheme {
+interface BaseTheme {
   palette: {
     primary: {
       main: string;
@@ -13,11 +13,12 @@ interface CardTheme {
     };
     secondary: {
       main: string;
+      dark: string;
     };
   };
 }
 
-const cardTheme: CardTheme = createTheme({
+const baseTheme: BaseTheme = createTheme({
   palette: {
     primary: {
       main: green[600],
@@ -27,17 +28,9 @@ const cardTheme: CardTheme = createTheme({
     },
     secondary: {
       main: yellow[600],
+      dark: yellow[800]
     },
   },
 });
 
-const cardStyles: SxProps<Theme> = {
-  display: "flex",
-  flexDirection: "column",
-  justifyContent: "space-between",
-  backgroundColor: cardTheme.palette.primary.light,
-  color: cardTheme.palette.primary.dark,
-  borderRadius: "0"
-};
-
-export { cardTheme, cardStyles };
+export { baseTheme };

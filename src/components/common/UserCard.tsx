@@ -6,8 +6,8 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { ThemeProvider } from '@mui/material/styles';
 import CardHeader from "@mui/material/CardHeader";
-import { cardTheme, cardStyles } from "../../style/cardTheme"
 import './../../style/card.scss';
+import { baseTheme } from "../../style/baseTheme";
 
 
 interface Props {
@@ -23,8 +23,7 @@ interface Props {
 
 export function UserCard({ name, email, address, phone, image, children, marginBottom }: Props) {
   return (
-    <ThemeProvider theme={cardTheme}>
-      <MCard sx={{ ...cardStyles, marginBottom: marginBottom || 8 }}>
+      <MCard sx={{ marginBottom: marginBottom || 8 }}>
         <CardHeader className="cardHeader"
           title="Podgląd użytkownika"
         />
@@ -38,13 +37,12 @@ export function UserCard({ name, email, address, phone, image, children, marginB
           <Typography sx={{ marginBottom: 1 }}>{phone}</Typography>
           <Typography
             variant="body1"
-            color={cardTheme.palette.primary.contrastText}
+            color={baseTheme.palette.primary.contrastText}
           ></Typography>
         </CardContent>
         <CardActions className="cardAction">
           {children}
         </CardActions>
       </MCard>
-    </ThemeProvider>
   );
 }

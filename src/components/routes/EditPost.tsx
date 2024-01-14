@@ -2,7 +2,6 @@ import { Button, Card, CardHeader, CircularProgress, CssBaseline, TextField, The
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useGetPostById } from '../../api/post/useGetPostById';
-import { cardTheme, cardStyles } from "../../style/cardTheme";
 import './../../style/form.scss';
 import './../../style/buttons.scss';
 import './../../style/circular.scss';
@@ -19,9 +18,7 @@ export default function EditPost() {
   }
 
   return (
-    <ThemeProvider theme={cardTheme}>
-      <CssBaseline />
-      <Card sx={{ ...cardStyles }}>
+      <Card sx={{ }}>
         <CardHeader className='formHeader'
           title="Edycja posta"
         />
@@ -97,6 +94,5 @@ export default function EditPost() {
           </div>
         </form>
       </Card>
-    </ThemeProvider>
   );
 }

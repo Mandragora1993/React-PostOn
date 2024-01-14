@@ -10,8 +10,8 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { green, yellow } from '@mui/material/colors';
 import { ThemeProvider } from '@mui/material/styles';
 import { Link, useNavigate } from "react-router-dom";
-import { navMenuTheme } from "../../style/navMenuTheme";
 import './../../style/navMenu.css'
+import { baseTheme } from "../../style/baseTheme";
 
 
 export function NavMenu() {
@@ -49,16 +49,14 @@ export function NavMenu() {
   });
 
   return (
-    <ThemeProvider theme={navMenuTheme}>
-      <CssBaseline />
       <AppBar className="navMenu">
         <Toolbar>
           <div onClick={generateAndNavigate} style={{ cursor: 'pointer' }}>
-            <IconButton className="" aria-label="profile"
+            <IconButton aria-label="profile"
               sx={{
-                color: navMenuTheme.palette.primary.contrastText,
+                color: baseTheme.palette.primary.contrastText,
                 '&:hover': {
-                  background: green[800],
+                  background: baseTheme.palette.secondary.dark,
                 },
               }}>
               <AccountCircleIcon sx={{ fontSize: '50px' }} />
@@ -70,12 +68,11 @@ export function NavMenu() {
               <PostAddIcon
                 sx={{
                   fontSize: '60px',
-                  color: navMenuTheme.palette.primary.contrastText,
+                  color: baseTheme.palette.primary.contrastText,
                 }} />
             </StyledFab>
           </Link>
         </Toolbar>
       </AppBar>
-    </ThemeProvider>
   );
 }

@@ -4,7 +4,6 @@ import { useGetPhotosByAlbumId } from "../../api/photo/useGetPhotosByAlbum";
 import { CardActions, CardContent, CardHeader, CircularProgress, CssBaseline, ThemeProvider, Typography } from '@mui/material';
 import { useParams } from 'react-router-dom';
 import './../../style/circular.scss';
-import { cardTheme, cardStyles } from '../../style/cardTheme';
 import MCard from "@mui/material/Card";
 
 
@@ -17,9 +16,7 @@ export default function StandardImageList() {
   }
 
   return (
-    <ThemeProvider theme={cardTheme}>
-    <CssBaseline />
-    <MCard sx={{ ...cardStyles }}>
+    <MCard sx={{  }}>
     <CardHeader 
       className= "cardHeader" 
       title= "Zdjęcia wybranego albumu" />
@@ -41,6 +38,5 @@ export default function StandardImageList() {
       <CardActions className="cardAction">
       </CardActions>
     </MCard>
-  </ThemeProvider>
   );
 }
