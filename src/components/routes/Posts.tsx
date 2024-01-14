@@ -15,7 +15,6 @@ export default function Posts() {
     return <CircularProgress className='circular' />;
   }
 
-  // Sprawdź, czy posts jest obiektem, a nie tablicą
   const postsArray = Array.isArray(posts) ? posts : [posts];
 
   return (

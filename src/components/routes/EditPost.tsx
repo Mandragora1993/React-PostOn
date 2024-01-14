@@ -18,7 +18,6 @@ export default function EditPost() {
     return <CircularProgress className='circular' />;
   }
 
-
   return (
     <ThemeProvider theme={cardTheme}>
       <CssBaseline />

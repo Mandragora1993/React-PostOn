@@ -12,10 +12,6 @@ import './../../style/circular.scss';
 const Home: React.FC = () => {
   const posts = useGetPosts();
 
-  useEffect(() => {
-    // Wywołaj funkcję, która korzysta z posts, jeśli to konieczne
-  }, [posts]);
-
   if (!posts) {
     return <CircularProgress className='circular' />;
   }
