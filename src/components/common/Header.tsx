@@ -12,20 +12,25 @@ export function Header() {
   return (
     <Box sx={{ flexGrow: 1, marginBottom: 8 }}>
       <AppBar position="static" color="primary">
-        <Container>
-          <Typography
-            variant="h1"
-            component={Link}
-            to="/"
-            sx={{
-              textDecoration: "none",
-              color: baseTheme.palette.primary.contrastText,
-              textAlign: "center"
-            }}
-          >
-            Phot<CameraIcon sx={{ fontSize: 105, color: baseTheme.palette.secondary.main }} />n
-          </Typography>
-        </Container>
+      <Container
+      sx={{
+        display: "flex",
+        alignItems: "center",
+      }}
+    >
+      <Typography
+        variant="h1"
+        component={Link}
+        to="/"
+        sx={{
+          textDecoration: "none",
+          color: baseTheme.palette.primary.contrastText,
+          textAlign: "center",
+        }}
+      >
+        Phot<CameraIcon sx={{ fontSize: 105,position:"relative",bottom:"10px", verticalAlign: "middle", color: baseTheme.palette.secondary.main }} />n
+      </Typography>
+    </Container>
       </AppBar>
     </Box>
   );
