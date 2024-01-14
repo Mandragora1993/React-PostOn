@@ -1,4 +1,4 @@
-import { Link, Outlet, useNavigate, useParams } from "react-router-dom";
+import { Link, Outlet, useParams } from "react-router-dom";
 import { ProfileCard } from "./../../components/common/ProfileCard";
 import { Button, CircularProgress } from "@mui/material";
 import { useGetUserById } from "../../api/user/useGetUserById";
@@ -6,6 +6,7 @@ import './../../style/circular.scss';
 import ReplyIcon from '@mui/icons-material/Reply';
 import ChecklistIcon from '@mui/icons-material/Checklist';
 import DynamicFeedIcon from '@mui/icons-material/DynamicFeed';
+
 
 export default function Profile() {
   const { id } = useParams();

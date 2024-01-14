@@ -1,7 +1,5 @@
 import { createTheme } from '@mui/material/styles';
 import { green, grey, yellow } from '@mui/material/colors';
-import { SxProps } from '@mui/system';
-import { Theme } from '@mui/material/styles';
 
 interface BaseTheme {
   palette: {

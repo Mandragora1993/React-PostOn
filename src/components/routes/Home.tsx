@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useGetPosts } from '../../api/post/useGetPosts';
-import { Card } from '../common/PostCard';
+import { PostCard } from '../common/PostCard';
 import { Link } from 'react-router-dom';
 import { Button, CircularProgress } from '@mui/material';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
@@ -8,6 +8,7 @@ import CommentModal from '../common/CommentsModal';
 import './../../style/buttons.scss';
 import { useGetUserById } from '../../api/user/useGetUserById';
 import './../../style/circular.scss';
+
 
 const Home: React.FC = () => {
   const posts = useGetPosts();
@@ -19,7 +20,7 @@ const Home: React.FC = () => {
   return (
     <div className="posts">
       {Array.isArray(posts) && posts.map((post) => (
-        <Card
+        <PostCard
           name={post.userId.toString()}
           description={post.body}
           title={post.title}
@@ -28,7 +29,7 @@ const Home: React.FC = () => {
         >
           <UserButton userId={post.userId} />
           <CommentModal />
-        </Card>
+        </PostCard>
       ))}
     </div>
   );

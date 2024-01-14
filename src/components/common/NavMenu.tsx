@@ -3,12 +3,9 @@ import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import { styled } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
 import Fab from '@mui/material/Fab';
 import PostAddIcon from '@mui/icons-material/PostAdd';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import { green, yellow } from '@mui/material/colors';
-import { ThemeProvider } from '@mui/material/styles';
 import { Link, useNavigate } from "react-router-dom";
 import './../../style/navMenu.css'
 import { baseTheme } from "../../style/baseTheme";
@@ -44,35 +41,35 @@ export function NavMenu() {
     width: 100,
     height: 100,
     '&:hover': {
-      background: yellow[800],
+      background: baseTheme.palette.secondary.dark,
     },
   });
 
   return (
-      <AppBar className="navMenu">
-        <Toolbar>
-          <div onClick={generateAndNavigate} style={{ cursor: 'pointer' }}>
-            <IconButton aria-label="profile"
+    <AppBar className="navMenu">
+      <Toolbar>
+        <div onClick={generateAndNavigate} style={{ cursor: 'pointer' }}>
+          <IconButton aria-label="profile"
+            sx={{
+              color: baseTheme.palette.primary.contrastText,
+              '&:hover': {
+                background: baseTheme.palette.secondary.dark,
+              },
+            }}>
+            <AccountCircleIcon sx={{ fontSize: '50px' }} />
+          </IconButton>
+        </div>
+        <Link to="/add-post">
+          <StyledFab
+            color="secondary" aria-label="add post">
+            <PostAddIcon
               sx={{
+                fontSize: '60px',
                 color: baseTheme.palette.primary.contrastText,
-                '&:hover': {
-                  background: baseTheme.palette.secondary.dark,
-                },
-              }}>
-              <AccountCircleIcon sx={{ fontSize: '50px' }} />
-            </IconButton>
-          </div>
-          <Link to="/add-post">
-            <StyledFab
-              color="secondary" aria-label="add post">
-              <PostAddIcon
-                sx={{
-                  fontSize: '60px',
-                  color: baseTheme.palette.primary.contrastText,
-                }} />
-            </StyledFab>
-          </Link>
-        </Toolbar>
-      </AppBar>
+              }} />
+          </StyledFab>
+        </Link>
+      </Toolbar>
+    </AppBar>
   );
 }

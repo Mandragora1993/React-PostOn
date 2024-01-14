@@ -1,0 +1,28 @@
+.cardHeader {
+  background-color: #43a047 !important;
+
+
+  span {
+    font-family: Nunito Sans, sans-serif !important;
+    font-weight: bold;
+    padding: 16px 0 0 32px;
+    font-size: 2em;
+    color: #fafafa !important;
+  }
+}
+
+.cardBody {
+  padding: 16px 16px 16px 48px !important;
+  background-color: #e8f5e9 !important;
+
+    p {
+      font-family: Nunito Sans, sans-serif !important;
+      font-weight: bold;
+      color: #43a047 !important;
+    }
+}
+
+.cardAction {
+  padding: 16px 16px 16px 48px !important;
+  background-color: #e8f5e9 !important;
+}

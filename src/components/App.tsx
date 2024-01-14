@@ -6,7 +6,6 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { baseTheme } from "./../style/baseTheme"
 
-
 import Home from "./routes/Home";
 import AddPost from "./routes/AddPost";
 import EditPost from "./routes/EditPost";
@@ -17,6 +16,7 @@ import Photos from "./routes/Photos";
 import ToDo from "./routes/TODO";
 import Posts from "./routes/Posts";
 import AlbumsList from "./routes/AlbumsList";
+
 
 export const App = () => {
   return (

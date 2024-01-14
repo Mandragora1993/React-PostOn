@@ -1,4 +1,3 @@
-// DeleteModal.tsx
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -9,6 +8,7 @@ import './../../style/modals.css';
 import './../../style/buttons.scss';
 import { green } from '@mui/material/colors';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { baseTheme } from '../../style/baseTheme';
 
 interface DeleteModalProps {
   postId: number;
@@ -78,9 +78,9 @@ const DeleteModal: React.FC<DeleteModalProps> = ({ postId }) => {
       >
         <Box
           className='modals'
-          sx={{ backgroundColor: green[50] }}
+          sx={{ backgroundColor: baseTheme.palette.primary.light }}
         >
-          <Typography variant="h6" gutterBottom sx={{ color: green[600] }}>
+          <Typography variant="h6" gutterBottom sx={{ fontWeight: "bold", color: baseTheme.palette.primary.main }}>
             Czy na pewno chcesz usunąć komentarz?
           </Typography>
           <Button

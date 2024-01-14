@@ -3,12 +3,13 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Modal from '@mui/material/Modal';
 import { CircularProgress } from '@mui/material';
-import { Card } from './PostCard';
+import { CommentCard } from './CommentCard';
 import { useGetCommentsByPostId } from '../../api/comment/useGetCommentsByPost';
 import CommentIcon from '@mui/icons-material/Comment';
 import './../../style/modals.css'
 import './../../style/icon.css'
 import './../../style/buttons.scss'
+import './../../style/circular.scss';
 
 
 const Comments = () => {
@@ -21,10 +22,9 @@ const Comments = () => {
   return (
     <div>
       {comments.map((comment) => (
-        <Card 
-          name=""
-          title=""
-          description={comment.body}
+        <CommentCard
+          name={comment.name}
+          body={comment.body}
           key={comment.id}
         />
       ))}

@@ -1,12 +1,13 @@
 // Posts.tsx
 import { useGetPosts } from '../../api/post/useGetPosts';
-import { Card } from '../common/PostCard';
-import { Link, useNavigate } from 'react-router-dom';
+import { PostCard } from '../common/PostCard';
+import { Link } from 'react-router-dom';
 import { Button, CircularProgress } from '@mui/material';
 import { DeleteModal } from '../common/DeleteModal';
 import './../../style/buttons.scss';
 import './../../style/circular.scss';
 import EditIcon from '@mui/icons-material/Edit';
+
 
 export default function Posts() {
   const posts = useGetPosts();
@@ -20,7 +21,7 @@ export default function Posts() {
   return (
     <div className="posts">
       {postsArray.map((post) => (
-        <Card
+        <PostCard
           name=':)'
           description={post.body}
           title={post.title}
@@ -37,7 +38,7 @@ export default function Posts() {
             <EditIcon className="icon" />Edycja
           </Button>
           <DeleteModal postId={post.id} />
-        </Card>
+        </PostCard>
       ))}
     </div>
   );
